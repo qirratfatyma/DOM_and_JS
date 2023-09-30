@@ -22,3 +22,15 @@ function getAttributes() {
           "\ntarget: " + target +
           "\ntype: " + type);
   }
+
+
+  function js_style() {
+    // Get the paragraph element by its ID
+    var paragraph = document.getElementById("text");
+  
+    // Modify the style properties
+    paragraph.style.fontSize = "24px"; // Change font size
+    paragraph.style.fontFamily = "Arial, sans-serif"; // Change font family
+    paragraph.style.color = "blue"; // Change text color
+    // You can modify other style properties here as well
+  }
