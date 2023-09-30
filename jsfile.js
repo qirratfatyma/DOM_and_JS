@@ -40,3 +40,33 @@ function getAttributes() {
     cell1.innerHTML = "Row Cell 1";
     cell2.innerHTML = "Row Cell 2";
   }
+
+  var sectionWithoutQuerySelector = document.getElementById("container");
+
+ var sectionWithQuerySelector = document.querySelector("#container");
+
+  var secondListItems = document.querySelectorAll(".second");
+
+  var thirdListItemInOl = document.querySelector("ol .third");
+
+  sectionWithQuerySelector.textContent = "Hello!";
+
+  var footerDiv = document.querySelector(".footer");
+  footerDiv.classList.add("main");
+
+  footerDiv.classList.remove("main");
+
+  var newListItem = document.createElement("li");
+
+  newListItem.textContent = "four";
+
+  var ulElement = document.querySelector("ul");
+  ulElement.appendChild(newListItem);
+
+  var olListItems = document.querySelectorAll("ol li");
+  olListItems.forEach(function(li) {
+    li.style.backgroundColor = "green";
+  });
+
+  var footerDivToRemove = document.querySelector(".footer");
+  footerDivToRemove.parentNode.removeChild(footerDivToRemove);
