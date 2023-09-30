@@ -5,17 +5,14 @@ function set_background() {
 
 
 function getAttributes() {
-    // Get the link element by its ID
     var link = document.getElementById("w3r");
   
-    // Get the specified attributes
     var href = link.getAttribute("href");
     var hreflang = link.getAttribute("hreflang");
     var rel = link.getAttribute("rel");
     var target = link.getAttribute("target");
     var type = link.getAttribute("type");
   
-    // Display the attribute values
     alert("href: " + href +
           "\nhreflang: " + hreflang +
           "\nrel: " + rel +
@@ -25,12 +22,21 @@ function getAttributes() {
 
 
   function js_style() {
-    // Get the paragraph element by its ID
     var paragraph = document.getElementById("text");
+
+    paragraph.style.fontSize = "24px"; 
+    paragraph.style.fontFamily = "Arial, sans-serif"; 
+    paragraph.style.color = "blue"; 
+  }
+
+  function insert_Row() {
+    var table = document.getElementById("sampleTable");
   
-    // Modify the style properties
-    paragraph.style.fontSize = "24px"; // Change font size
-    paragraph.style.fontFamily = "Arial, sans-serif"; // Change font family
-    paragraph.style.color = "blue"; // Change text color
-    // You can modify other style properties here as well
+    var newRow = table.insertRow();
+
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+  
+    cell1.innerHTML = "Row Cell 1";
+    cell2.innerHTML = "Row Cell 2";
   }
